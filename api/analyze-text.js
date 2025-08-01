@@ -127,7 +127,12 @@ export default async function handler(req, res) {
 
         let analysisResult;
         try {
-            analysisResult = JSON.parse(jsonMatch[0]);
+            // JSON修正：余分なカンマを削除
+            let jsonString = jsonMatch[0];
+            // オブジェクトや配列の終わりの直前にある余分なカンマを削除
+            jsonString = jsonString.replace(/,(\s*[}\]])/g, '$1');
+            
+            analysisResult = JSON.parse(jsonString);
         } catch (parseError) {
             console.error('JSON Parse Error:', parseError);
             console.error('Raw JSON string:', jsonMatch[0]);
