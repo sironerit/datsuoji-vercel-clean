@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>脱おじ構文AI - おじさん構文を品格ある文章に改善する無料ツール</title>
     
-    
     <!-- Content Security Policy -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://pagead2.googlesyndication.com 'unsafe-inline'; connect-src 'self' https://generativelanguage.googleapis.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#2563eb">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="脱おじ構文">
     
     <!-- SEO Meta Tags -->
     <meta name="description" content="脱おじ構文AI - 無料でおじさん構文を品格ある文章に改善。40-50代男性のマッチングアプリ・LINEメッセージを自然で好印象な表現に変換。AI搭載の文章改善ツールで即座に4つの改善案を提案。">
@@ -17,43 +22,18 @@
     <meta property="og:title" content="脱おじ構文AI - おじさん構文を品格ある文章に改善する無料ツール">
     <meta property="og:description" content="AI搭載の無料ツールでおじさん構文を自然で好印象な文章に改善。40-50代男性のマッチングアプリ・LINEに最適。">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://datsuoji.vercel.app/">
-    <meta property="og:image" content="https://datsuoji.vercel.app/icons/icon-512x512.png">
+    <meta property="og:url" content="https://datsuoji-app.vercel.app/">
+    <meta property="og:image" content="https://datsuoji-app.vercel.app/icons/icon-512x512.png">
     <meta property="og:site_name" content="脱おじ構文">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://datsuoji-app.vercel.app/">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="脱おじ構文 - おじさん構文を品格ある文章に改善">
     <meta name="twitter:description" content="40-50代男性向け：おじさん構文を品格ある文章に改善するツール">
-    <meta name="twitter:image" content="https://datsuoji.vercel.app/icons/icon-512x512.png">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://datsuoji.vercel.app/">
-    
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebApplication",
-        "name": "脱おじ構文",
-        "alternateName": "脱おじ構文ツール",
-        "description": "40-50代男性向けのおじさん構文を品格ある自然な文章に改善するツール。マッチングアプリやLINEメッセージを適切な表現に変換。",
-        "url": "https://datsuoji.vercel.app/",
-        "applicationCategory": "UtilityApplication",
-        "operatingSystem": "Web Browser",
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "JPY"
-        },
-        "author": {
-            "@type": "Organization",
-            "name": "脱おじ構文"
-        },
-        "keywords": ["脱おじ構文", "おじさん構文", "メッセージ改善", "文章添削", "40代", "50代"],
-        "inLanguage": "ja"
-    }
-    </script>
+    <meta name="twitter:image" content="https://datsuoji-app.vercel.app/icons/icon-512x512.png">
     
     <!-- Icons -->
     <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon.png">
@@ -65,16 +45,12 @@
     
     <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css">
-    
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6951927800009044"
-         crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- Header -->
     <header class="header">
         <div class="container">
-            <h1 class="logo"><img src="icons/icon-192x192.png" alt="脱おじ構文" class="logo-icon"> 脱おじ構文 - 改善</h1>
+            <h1 class="logo"><img src="icons/icon-192x192.png" alt="脱おじ構文" class="logo-icon"> 脱おじ構文AI</h1>
             <p class="tagline">40-50代男性向け | おじさん構文を品格ある文章に改善</p>
         </div>
     </header>
@@ -86,8 +62,8 @@
             <div class="sidebar-section">
                 <h3>📋 機能メニュー</h3>
                 <nav class="toc-nav">
-                    <a href="./" class="toc-link active">💬 メッセージ改善</a>
-                    <a href="./analysis.html" class="toc-link">📊 メッセージ分析</a>
+                    <a href="./" class="toc-link active">📊 メッセージ分析</a>
+                    <a href="./improve.html" class="toc-link">💬 メッセージ改善</a>
                     <a href="./learning.html" class="toc-link">📚 会話術学習</a>
                 </nav>
             </div>
@@ -99,7 +75,6 @@
                     <!-- Dynamic content will be loaded here -->
                 </div>
             </div>
-            
         </div>
     </aside>
 
@@ -107,90 +82,186 @@
     <div class="content-with-sidebar">
         <!-- Main Content -->
         <main class="main">
-        <div class="container">
-            <!-- Compact Hero Section with Input -->
-            <section class="hero-section" id="input-section">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <h2>💬 脱おじ構文AI - おじさん構文を品格ある文章に改善</h2>
-                        <p class="hero-description">
-                            40-50代男性向けの脱おじ構文ツール。おじさん構文の不適切な表現を自然で好印象な文章に改善します。マッチングアプリ・LINE・ビジネスメールでもう恥ずかしくない品格ある文章作成をサポート。
-                        </p>
-                        <div class="quick-example">
-                            <div class="example-compact">
-                                <span class="before-compact">❌ 写真可愛いですね😍</span>
-                                <span class="arrow-compact">→</span>
-                                <span class="after-compact">✅ 素敵なお写真ですね</span>
+            <div class="container">
+                <!-- Hero Section -->
+                <section class="hero-section" id="hero-section">
+                    <div class="hero-content">
+                        <div class="hero-text">
+                            <h2>💬 脱おじ構文AI - おじさん構文を品格ある文章に改善</h2>
+                            <p class="hero-description">
+                                40-50代男性向けの脱おじ構文ツール。おじさん構文の不適切な表現を自然で好印象な文章に改善します。マッチングアプリ・LINE・ビジネスメールでもう恥ずかしくない品格ある文章作成をサポート。
+                            </p>
+                            <div class="quick-example">
+                                <div class="example-compact">
+                                    <span class="before-compact">❌ 写真可愛いですね😍</span>
+                                    <span class="arrow-compact">→</span>
+                                    <span class="after-compact">✅ 素敵なお写真ですね</span>
+                                </div>
                             </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Analysis Input Section -->
+                <section class="analysis-input-section">
+                    <div class="analysis-hero">
+                        <h2>📊 メッセージを詳細分析</h2>
+                        <p class="analysis-description">
+                            プロ恋愛コーチの視点で、あなたのメッセージを徹底分析。
+                            <strong>何が問題で、なぜダメなのか</strong>を具体的に解説します。
+                        </p>
+                    
+                    <div class="input-analysis-wrapper">
+                        <textarea
+                            id="analysisInputText"
+                            class="analysis-textarea"
+                            placeholder="分析したいメッセージを入力してください...&#10;例：写真可愛いですね😍お疲れ様です🍺一緒にお酒飲みませんか？"
+                            rows="4"
+                            maxlength="500"
+                        ></textarea>
+                        <div class="char-counter">
+                            <span id="analysisCharCount">0</span>/500
                         </div>
                     </div>
                     
-                    <div class="hero-input">
-                        <div class="input-wrapper">
-                            <textarea
-                                id="inputText"
-                                class="input-textarea"
-                                placeholder="改善したいメッセージを入力..."
-                                rows="3"
-                                maxlength="500"
-                            ></textarea>
-                            <div class="char-counter">
-                                <span id="charCount">0</span>/500
+                    <button id="analyzeBtn" class="analyze-btn" disabled>
+                        🔍 プロ分析を開始
+                    </button>
+                </div>
+            </section>
+
+            <!-- Analysis Results Section -->
+            <section class="analysis-results-section" id="analysisResultsSection" style="display: none;">
+                <h2>📋 分析結果</h2>
+                
+                <!-- Enhanced Category Scores with Side Radar Chart -->
+                <div class="detailed-analysis">
+                    <div class="analysis-layout">
+                        <!-- Left Side: 2x2 Category Grid -->
+                        <div class="analysis-categories-grid">
+                            <div class="category-card">
+                                <h4>😊 印象・好感度</h4>
+                                <div class="category-score-section">
+                                    <div class="category-score">
+                                        <span id="impressionScore">-</span>%
+                                    </div>
+                                    <div class="score-bar-category">
+                                        <div id="impressionProgress" class="score-progress-category"></div>
+                                    </div>
+                                </div>
+                                <div id="impressionFeedback" class="category-feedback">分析中...</div>
+                            </div>
+                            
+                            <div class="category-card">
+                                <h4>💬 自然さ・読みやすさ</h4>
+                                <div class="category-score-section">
+                                    <div class="category-score">
+                                        <span id="naturalScore">-</span>%
+                                    </div>
+                                    <div class="score-bar-category">
+                                        <div id="naturalProgress" class="score-progress-category"></div>
+                                    </div>
+                                </div>
+                                <div id="naturalFeedback" class="category-feedback">分析中...</div>
+                            </div>
+                            
+                            <div class="category-card">
+                                <h4>🛡️ 不快リスク回避</h4>
+                                <div class="category-score-section">
+                                    <div class="category-score">
+                                        <span id="riskScore">-</span>%
+                                    </div>
+                                    <div class="score-bar-category">
+                                        <div id="riskProgress" class="score-progress-category"></div>
+                                    </div>
+                                </div>
+                                <div id="riskFeedback" class="category-feedback">分析中...</div>
+                            </div>
+                            
+                            <div class="category-card">
+                                <h4>✨ 会話継続性</h4>
+                                <div class="category-score-section">
+                                    <div class="category-score">
+                                        <span id="continuityScore">-</span>%
+                                    </div>
+                                    <div class="score-bar-category">
+                                        <div id="continuityProgress" class="score-progress-category"></div>
+                                    </div>
+                                </div>
+                                <div id="continuityFeedback" class="category-feedback">分析中...</div>
                             </div>
                         </div>
-                        <button id="improveBtn" class="improve-btn" disabled>
-                            ✨ 文章を改善する（4候補表示）
-                        </button>
+                        
+                        <!-- Right Side: Overall Score + Radar Chart -->
+                        <div class="right-analysis-section">
+                            <!-- Compact Overall Score -->
+                            <div class="compact-score-section">
+                                <h3>📊 総合スコア</h3>
+                                <div class="compact-score-display">
+                                    <div class="compact-score-circle">
+                                        <span id="overallScore" class="compact-score-number">0</span>
+                                        <span class="compact-score-suffix">点</span>
+                                    </div>
+                                    <div class="compact-score-grade">
+                                        <span id="scoreGrade" class="compact-grade-text">評価中...</span>
+                                        <div id="scoreBar" class="compact-score-bar">
+                                            <div id="scoreProgress" class="compact-score-progress"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Radar Chart -->
+                            <div class="radar-chart-section">
+                                <h3>📈 スコア可視化</h3>
+                                <div class="chart-container">
+                                    <canvas id="radarChart" width="260" height="260"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Issues and Improvements Side-by-Side -->
+                <div class="issues-improvements-section">
+                    <div class="issues-column">
+                        <h3>⚠️ 検出された問題点</h3>
+                        <div id="detectedIssues" class="issues-list">
+                            <!-- Issues will be populated here -->
+                        </div>
+                    </div>
+                    
+                    <div class="improvements-column">
+                        <h3>💡 具体的な改善提案</h3>
+                        <div id="improvementList" class="improvement-list">
+                            <!-- Improvement suggestions will be populated here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pro Tips -->
+                <div class="pro-tips-section">
+                    <h3>🎯 プロからのアドバイス</h3>
+                    <div id="proTips" class="pro-tips-content">
+                        <!-- Pro tips will be populated here -->
                     </div>
                 </div>
             </section>
-
-            <!-- Results Section -->
-            <section class="results-section" id="resultsSection" style="display: none;">
-                <h2>📝 改善提案（4候補）</h2>
-                <div class="results-grid" id="resultsGrid">
-                    <!-- Results will be populated here -->
-                </div>
-            </section>
-
-        </div>
+            </div>
         </main>
 
-        <!-- Right Sidebar - Product Display -->
+        <!-- Right Sidebar - Shared Product Display -->
         <aside class="page-sidebar">
-        <div class="sidebar-content">
-            <!-- Direct Products Display (No Categories) -->
-            <div class="sidebar-section">
-                <h3>🛍️ おすすめ商品</h3>
-                <div class="sidebar-products" id="sidebarProducts">
-                    <!-- Products will be loaded here -->
+            <div class="sidebar-content">
+                <div class="sidebar-section">
+                    <h3>🛍️ おすすめ商品</h3>
+                    <div class="sidebar-products" id="sidebarProducts">
+                        <!-- Products will be loaded by shared-products.js -->
+                    </div>
                 </div>
             </div>
-        </div>
         </aside>
     </div>
-
-    <!-- SEO Content Section -->
-    <section class="seo-content">
-        <div class="container">
-            <div class="seo-text">
-                <h3>🤖 脱おじ構文AIで印象改善</h3>
-                <p>
-                    <strong>脱おじ構文AI</strong>は、AI技術を使って40-50代男性の「おじさん構文」を自然で品格ある文章に改善する無料ツールです。
-                    マッチングアプリでの<strong>おじさん構文</strong>に悩んでいる方、LINEやメールで若い世代に好印象を与えたい方に最適。
-                    AI搭載の<strong>脱おじ構文</strong>ツールで、瞬時に4つの改善案を提案します。
-                </p>
-                <div class="keyword-list">
-                    <span class="keyword-tag">脱おじ構文AI</span>
-                    <span class="keyword-tag">おじさん構文</span>
-                    <span class="keyword-tag">AI文章改善</span>
-                    <span class="keyword-tag">無料ツール</span>
-                    <span class="keyword-tag">40代男性</span>
-                    <span class="keyword-tag">50代男性</span>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -205,15 +276,16 @@
     </footer>
 
     <!-- Loading Modal -->
-    <div class="modal" id="loadingModal">
+    <div class="modal" id="analysisLoadingModal">
         <div class="modal-content">
             <div class="loader"></div>
-            <p>メッセージを改善中です...</p>
+            <p>プロ恋愛コーチがメッセージを分析中...</p>
         </div>
     </div>
 
     <!-- Scripts -->
     <script src="daily-tip.js"></script>
     <script src="app.js"></script>
+    <script src="analysis.js"></script>
 </body>
 </html>
