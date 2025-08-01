@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>メッセージ分析 - 脱おじ構文</title>
+    
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://pagead2.googlesyndication.com 'unsafe-inline'; connect-src 'self' https://generativelanguage.googleapis.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#2563eb">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="脱おじ構文">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="40-50代男性向け：メッセージの問題点を詳細分析。プロ恋愛コーチ風の具体的なアドバイスで改善点を明確化します。">
+    <meta name="keywords" content="40代,50代,男性向け,メッセージ分析,おじさん構文,文章分析,マッチングアプリ,恋愛コーチ,コミュニケーション">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="メッセージ分析 - 脱おじ構文">
+    <meta property="og:description" content="40-50代男性向け：メッセージの問題点を詳細分析。プロ恋愛コーチ風の具体的なアドバイスで改善点を明確化します。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://datsuoji.netlify.app/analysis.html">
+    <meta property="og:image" content="https://datsuoji.netlify.app/icons/icon-512x512.png">
+    <meta property="og:site_name" content="脱おじ構文">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://datsuoji.netlify.app/analysis.html">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="メッセージ分析 - 脱おじ構文">
+    <meta name="twitter:description" content="40-50代男性向け：メッセージの問題点を詳細分析。プロ恋愛コーチ風の具体的なアドバイスで改善点を明確化します。">
+    <meta name="twitter:image" content="https://datsuoji.netlify.app/icons/icon-512x512.png">
+    
+    <!-- Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icons/icon-96x96.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="icons/icon-512x512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/icon-180x180.png">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo"><img src="icons/icon-192x192.png" alt="脱おじ構文" class="logo-icon"> 脱おじ構文 - 分析</h1>
+            <p class="tagline">40-50代男性向け | プロ恋愛コーチ風の詳細メッセージ分析</p>
+        </div>
+    </header>
+
+    <!-- Left Sidebar -->
+    <aside class="left-sidebar">
+        <div class="left-sidebar-content">
+            <!-- Navigation Menu -->
+            <div class="sidebar-section">
+                <h3>📋 機能メニュー</h3>
+                <nav class="toc-nav">
+                    <a href="./" class="toc-link">💬 メッセージ改善</a>
+                    <a href="./analysis.html" class="toc-link active">📊 メッセージ分析</a>
+                    <a href="./learning.html" class="toc-link">📚 会話術学習</a>
+                </nav>
+            </div>
+            
+            <!-- Quick Tips -->
+            <div class="sidebar-section">
+                <h3>💡 今日のワンポイント</h3>
+                <div class="daily-tip" id="dailyTip">
+                    <!-- Dynamic content will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content Area with Sidebar -->
+    <div class="content-with-sidebar">
+        <!-- Main Content -->
+        <main class="main">
+            <div class="container">
+                <!-- Analysis Input Section -->
+                <section class="analysis-input-section">
+                    <div class="analysis-hero">
+                        <h2>📊 メッセージを詳細分析</h2>
+                        <p class="analysis-description">
+                            プロ恋愛コーチの視点で、あなたのメッセージを徹底分析。
+                            <strong>何が問題で、なぜダメなのか</strong>を具体的に解説します。
+                        </p>
+                    
+                    <div class="input-analysis-wrapper">
+                        <textarea
+                            id="analysisInputText"
+                            class="analysis-textarea"
+                            placeholder="分析したいメッセージを入力してください...&#10;例：写真可愛いですね😍お疲れ様です🍺一緒にお酒飲みませんか？"
+                            rows="4"
+                            maxlength="500"
+                        ></textarea>
+                        <div class="char-counter">
+                            <span id="analysisCharCount">0</span>/500
+                        </div>
+                    </div>
+                    
+                    <button id="analyzeBtn" class="analyze-btn" disabled>
+                        🔍 プロ分析を開始
+                    </button>
+                </div>
+            </section>
+
+            <!-- Analysis Results Section -->
+            <section class="analysis-results-section" id="analysisResultsSection" style="display: none;">
+                <h2>📋 分析結果</h2>
+                
+                <!-- Enhanced Category Scores with Side Radar Chart -->
+                <div class="detailed-analysis">
+                    <div class="analysis-layout">
+                        <!-- Left Side: 2x2 Category Grid -->
+                        <div class="analysis-categories-grid">
+                            <div class="category-card">
+                                <h4>😊 印象・好感度</h4>
+                                <div class="category-score-section">
+                                    <div class="category-score">
+                                        <span id="impressionScore">-</span>%
+                                    </div>
+                                    <div class="score-bar-category">
+                                        <div id="impressionProgress" class="score-progress-category"></div>
+                                    </div>
+                                </div>
+                                <div id="impressionFeedback" class="category-feedback">分析中...</div>
+                            </div>
+                            
+                            <div class="category-card">
+                                <h4>💬 自然さ・読みやすさ</h4>
+                                <div class="category-score-section">
+                                    <div class="category-score">
+                                        <span id="naturalScore">-</span>%
+                                    </div>
+                                    <div class="score-bar-category">
+                                        <div id="naturalProgress" class="score-progress-category"></div>
+                                    </div>
+                                </div>
+                                <div id="naturalFeedback" class="category-feedback">分析中...</div>
+                            </div>
+                            
+                            <div class="category-card">
+                                <h4>🛡️ 不快リスク回避</h4>
+                                <div class="category-score-section">
+                                    <div class="category-score">
+                                        <span id="riskScore">-</span>%
+                                    </div>
+                                    <div class="score-bar-category">
+                                        <div id="riskProgress" class="score-progress-category"></div>
+                                    </div>
+                                </div>
+                                <div id="riskFeedback" class="category-feedback">分析中...</div>
+                            </div>
+                            
+                            <div class="category-card">
+                                <h4>✨ 会話継続性</h4>
+                                <div class="category-score-section">
+                                    <div class="category-score">
+                                        <span id="continuityScore">-</span>%
+                                    </div>
+                                    <div class="score-bar-category">
+                                        <div id="continuityProgress" class="score-progress-category"></div>
+                                    </div>
+                                </div>
+                                <div id="continuityFeedback" class="category-feedback">分析中...</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Right Side: Overall Score + Radar Chart -->
+                        <div class="right-analysis-section">
+                            <!-- Compact Overall Score -->
+                            <div class="compact-score-section">
+                                <h3>📊 総合スコア</h3>
+                                <div class="compact-score-display">
+                                    <div class="compact-score-circle">
+                                        <span id="overallScore" class="compact-score-number">0</span>
+                                        <span class="compact-score-suffix">点</span>
+                                    </div>
+                                    <div class="compact-score-grade">
+                                        <span id="scoreGrade" class="compact-grade-text">評価中...</span>
+                                        <div id="scoreBar" class="compact-score-bar">
+                                            <div id="scoreProgress" class="compact-score-progress"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Radar Chart -->
+                            <div class="radar-chart-section">
+                                <h3>📈 スコア可視化</h3>
+                                <div class="chart-container">
+                                    <canvas id="radarChart" width="260" height="260"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Issues and Improvements Side-by-Side -->
+                <div class="issues-improvements-section">
+                    <div class="issues-column">
+                        <h3>⚠️ 検出された問題点</h3>
+                        <div id="detectedIssues" class="issues-list">
+                            <!-- Issues will be populated here -->
+                        </div>
+                    </div>
+                    
+                    <div class="improvements-column">
+                        <h3>💡 具体的な改善提案</h3>
+                        <div id="improvementList" class="improvement-list">
+                            <!-- Improvement suggestions will be populated here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pro Tips -->
+                <div class="pro-tips-section">
+                    <h3>🎯 プロからのアドバイス</h3>
+                    <div id="proTips" class="pro-tips-content">
+                        <!-- Pro tips will be populated here -->
+                    </div>
+                </div>
+            </section>
+            </div>
+        </main>
+
+        <!-- Right Sidebar - Shared Product Display -->
+        <aside class="page-sidebar">
+            <div class="sidebar-content">
+                <div class="sidebar-section">
+                    <h3>🛍️ おすすめ商品</h3>
+                    <div class="sidebar-products" id="sidebarProducts">
+                        <!-- Products will be loaded by shared-products.js -->
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 脱おじ構文. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="privacy.html">プライバシーポリシー</a>
+                <a href="terms.html">利用規約</a>
+                <a href="contact.html">お問い合わせ</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Modal -->
+    <div class="modal" id="analysisLoadingModal">
+        <div class="modal-content">
+            <div class="loader"></div>
+            <p>プロ恋愛コーチがメッセージを分析中...</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="daily-tip.js"></script>
+    <script src="app.js"></script>
+    <script src="analysis.js"></script>
+</body>
+</html>

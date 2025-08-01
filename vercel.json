@@ -1,0 +1,10 @@
+{
+  "functions": {
+    "api/improve-text.js": {
+      "maxDuration": 30
+    },
+    "api/analyze-text.js": {
+      "maxDuration": 30
+    }
+  }
+}

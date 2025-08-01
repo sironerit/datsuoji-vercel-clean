@@ -1,0 +1,10 @@
+{
+  "name": "datsuoji-vercel",
+  "version": "1.0.0",
+  "description": "脱おじ構文AI - Vercel Version",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve .",
+    "build": "echo 'No build needed'"
+  }
+}

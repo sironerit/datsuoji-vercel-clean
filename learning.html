@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>会話術学習 - 脱おじ構文</title>
+    
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://pagead2.googlesyndication.com 'unsafe-inline'; connect-src 'self' https://generativelanguage.googleapis.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#2563eb">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="脱おじ構文">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="40-50代男性向け：恋愛・デート・マッチングアプリで好印象を与える会話術を完全網羅。実践的なテクニックとコツを辞書形式で学習できます。">
+    <meta name="keywords" content="40代,50代,男性向け,会話術,恋愛テクニック,デート,マッチングアプリ,モテる方法,コミュニケーション術">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="会話術学習 - 脱おじ構文">
+    <meta property="og:description" content="40-50代男性向け：恋愛・デート・マッチングアプリで好印象を与える会話術を完全網羅。実践的なテクニックとコツを辞書形式で学習できます。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://datsuoji.netlify.app/learning.html">
+    <meta property="og:image" content="https://datsuoji.netlify.app/icons/icon-512x512.png">
+    <meta property="og:site_name" content="脱おじ構文">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://datsuoji.netlify.app/learning.html">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="会話術学習 - 脱おじ構文">
+    <meta name="twitter:description" content="40-50代男性向け：恋愛・デート・マッチングアプリで好印象を与える会話術を完全網羅。実践的なテクニックとコツを辞書形式で学習できます。">
+    <meta name="twitter:image" content="https://datsuoji.netlify.app/icons/icon-512x512.png">
+    
+    <!-- Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icons/icon-96x96.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="icons/icon-512x512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/icon-180x180.png">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo"><img src="icons/icon-192x192.png" alt="脱おじ構文" class="logo-icon"> 脱おじ構文 - 会話術学習</h1>
+            <p class="tagline">40-50代男性向け | 恋愛・デート完全攻略辞書</p>
+        </div>
+    </header>
+
+    <!-- Left Sidebar -->
+    <aside class="left-sidebar">
+        <div class="left-sidebar-content">
+            <!-- Navigation Menu -->
+            <div class="sidebar-section">
+                <h3>📋 機能メニュー</h3>
+                <nav class="toc-nav">
+                    <a href="./" class="toc-link">💬 メッセージ改善</a>
+                    <a href="./analysis.html" class="toc-link">📊 メッセージ分析</a>
+                    <a href="./learning.html" class="toc-link active">📚 会話術学習</a>
+                </nav>
+            </div>
+            
+            <!-- Quick Tips -->
+            <div class="sidebar-section">
+                <h3>💡 今日のワンポイント</h3>
+                <div class="daily-tip" id="dailyTip">
+                    <!-- Dynamic content will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content Area with Sidebar -->
+    <div class="content-with-sidebar">
+        <!-- Main Content -->
+        <main class="main">
+            <div class="container">
+            <!-- Search and Filter Section -->
+            <section class="learning-search-section">
+                <div class="search-header">
+                    <h2>📚 恋愛・会話術 完全攻略辞書</h2>
+                    <p class="search-description">
+                        40-50代男性のための実践的な恋愛テクニック集。マッチングアプリからデートまで、
+                        <strong>好印象を与えるコミュニケーション術</strong>を完全網羅しています。
+                    </p>
+                </div>
+
+                <!-- Search Box -->
+                <div class="search-box-wrapper">
+                    <div class="search-box">
+                        <input type="text" id="learningSearchInput" placeholder="検索したいテクニック・シチュエーションを入力...（例：デート誘い方、LINE返信、プロフィール）" />
+                        <button id="searchBtn" class="search-btn">🔍 検索</button>
+                    </div>
+                </div>
+
+                <!-- Category Filter -->
+                <div class="category-filters">
+                    <button class="category-filter-btn active" data-filter="all">📖 すべて</button>
+                    <button class="category-filter-btn" data-filter="first-contact">📬 初回アプローチ</button>
+                    <button class="category-filter-btn" data-filter="conversation">💬 会話継続術</button>
+                    <button class="category-filter-btn" data-filter="date-invitation">💕 デート誘い方</button>
+                    <button class="category-filter-btn" data-filter="date-success">🍽️ デート成功術</button>
+                    <button class="category-filter-btn" data-filter="profile-photo">📷 プロフィール術</button>
+                    <button class="category-filter-btn" data-filter="psychology">🧠 恋愛心理学</button>
+                </div>
+            </section>
+
+            <!-- Learning Content Grid -->
+            <section class="learning-content-section">
+                <div class="learning-grid" id="learningGrid">
+                    <!-- Content will be loaded here by JavaScript -->
+                </div>
+            </section>
+            </div>
+        </main>
+
+        <!-- Right Sidebar - Improved Product Display -->
+        <aside class="page-sidebar">
+        <div class="sidebar-content">
+            <!-- Direct Products Display (No Categories) -->
+            <div class="sidebar-section">
+                <h3>🛒 おすすめ商品</h3>
+                <div class="sidebar-products" id="sidebarProducts">
+                    <!-- Products will be loaded here -->
+                </div>
+            </div>
+        </div>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 脱おじ構文. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="privacy.html">プライバシーポリシー</a>
+                <a href="terms.html">利用規約</a>
+                <a href="contact.html">お問い合わせ</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Learning Detail Modal -->
+    <div class="modal learning-modal" id="learningModal">
+        <div class="modal-content learning-modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">タイトル</h3>
+                <button class="modal-close" id="modalCloseBtn">×</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Detail content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="daily-tip.js"></script>
+    <script src="app.js"></script>
+    <script src="learning-v4.js"></script>
+    
+    <!-- Service Worker無効化 -->
+    <script>
+    if ('serviceWorker' in navigator) {
+        // 既存のService Worker完全削除
+        navigator.serviceWorker.getRegistrations().then(registrations => {
+            registrations.forEach(registration => {
+                console.log('🔥 Permanently unregistering SW:', registration.scope);
+                registration.unregister();
+            });
+        });
+        
+        // 新しいService Worker登録を阻止
+        console.log('🚫 Service Worker disabled for this session');
+    }
+    </script>
+</body>
+</html>
