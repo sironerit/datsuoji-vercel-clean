@@ -83,43 +83,42 @@
         <!-- Main Content -->
         <main class="main">
             <div class="container">
-                <!-- Hero Section -->
-                <section class="hero-section" id="hero-section">
-                    <div class="hero-content-analysis">
-                        <h2>💬 脱おじ構文AI - おじさん構文を品格ある文章に改善</h2>
-                        <p class="hero-description">
-                            40-50代男性向けの脱おじ構文ツール。おじさん構文の不適切な表現を自然で好印象な文章に改善します。マッチングアプリ・LINE・ビジネスメールでもう恥ずかしくない品格ある文章作成をサポート。プロ恋愛コーチの視点で、あなたのメッセージの問題点を詳細分析し、具体的な改善提案を提供します。
-                        </p>
-                    </div>
-                </section>
-
-                <!-- Analysis Input Section -->
-                <section class="analysis-input-section">
-                    <div class="analysis-hero">
-                        <h2>📊 メッセージを詳細分析</h2>
-                        <p class="analysis-description">
-                            プロ恋愛コーチの視点で、あなたのメッセージを徹底分析。
-                            <strong>何が問題で、なぜダメなのか</strong>を具体的に解説します。
-                        </p>
-                    
-                    <div class="input-analysis-wrapper">
-                        <textarea
-                            id="analysisInputText"
-                            class="analysis-textarea"
-                            placeholder="分析したいメッセージを入力してください...&#10;例：写真可愛いですね😍お疲れ様です🍺一緒にお酒飲みませんか？"
-                            rows="4"
-                            maxlength="500"
-                        ></textarea>
-                        <div class="char-counter">
-                            <span id="analysisCharCount">0</span>/500
+                <!-- Hero Section with 2-Column Layout -->
+                <section class="hero-section" id="input-section">
+                    <div class="hero-content">
+                        <div class="hero-text">
+                            <h2>📊 脱おじ構文AI - メッセージを詳細分析</h2>
+                            <p class="hero-description">
+                                プロ恋愛コーチの視点で、あなたのメッセージを徹底分析。40-50代男性向けの脱おじ構文ツール。おじさん構文の不適切な表現を自然で好印象な文章に改善します。<strong>何が問題で、なぜダメなのか</strong>を具体的に解説し、マッチングアプリ・LINE・ビジネスメールでの印象を大幅改善します。
+                            </p>
+                            <div class="quick-example">
+                                <div class="example-compact">
+                                    <span class="before-compact">🔍 詳細分析</span>
+                                    <span class="arrow-compact">→</span>
+                                    <span class="after-compact">📊 改善提案</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="hero-input">
+                            <div class="input-wrapper">
+                                <textarea
+                                    id="analysisInputText"
+                                    class="input-textarea"
+                                    placeholder="分析したいメッセージを入力してください..."
+                                    rows="4"
+                                    maxlength="500"
+                                ></textarea>
+                                <div class="char-counter">
+                                    <span id="analysisCharCount">0</span>/500
+                                </div>
+                            </div>
+                            <button id="analyzeBtn" class="analyze-btn" disabled>
+                                🔍 プロ分析を開始
+                            </button>
                         </div>
                     </div>
-                    
-                    <button id="analyzeBtn" class="analyze-btn" disabled>
-                        🔍 プロ分析を開始
-                    </button>
-                </div>
-            </section>
+                </section>
 
             <!-- Analysis Results Section -->
             <section class="analysis-results-section" id="analysisResultsSection" style="display: none;">
